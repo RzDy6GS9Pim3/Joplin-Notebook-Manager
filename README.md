@@ -2,7 +2,9 @@
 
 A powerful toolkit for managing Joplin notebooks and notes, featuring duplicate detection, hierarchical merging, and cleanup utilities.
 
-![Joplin Logo](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/LinuxIcons/256x256.png)
+<p align="center">
+  <img src='https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/LinuxIcons/256x256.png' width="200" alt='Joplin Logo'>
+</p>
 
 ## Features
 
@@ -57,20 +59,31 @@ A powerful toolkit for managing Joplin notebooks and notes, featuring duplicate 
 
   🔒 Token is never stored - set it each session or use environment variables
 
-## Screenshots:
+## Screenshots
 
 ### Example of '1. Find & Manage Duplicate Notes'
-![Screenshot from 2025-01-25 23-59-14](https://github.com/user-attachments/assets/db323743-8921-419b-8575-dc6e68ff62d5)
+<p align="left">
+  <img src='https://github.com/user-attachments/assets/db323743-8921-419b-8575-dc6e68ff62d5' width="8200" >
+</p>
 
 ### Example of '2. Find & Merge Duplicate Notebooks '
-![Screenshot from 2025-01-25 23-51-49](https://github.com/user-attachments/assets/53904044-38a9-4561-a1b3-8f53106c4503)
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/53904044-38a9-4561-a1b3-8f53106c4503" width="550" >
+</p>
 
-![Screenshot from 2025-01-26 00-27-36](https://github.com/user-attachments/assets/65811635-a4d4-463c-9309-40c854260245)
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/65811635-a4d4-463c-9309-40c854260245" width="500" >
+</p>
 
 ### Example of '3. Find & Delete Empty Notebooks'
-
-![Screenshot from 2025-01-26 00-00-50](https://github.com/user-attachments/assets/29629f2c-173c-4e5e-8ae2-2316e7000a0f)
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/29629f2c-173c-4e5e-8ae2-2316e7000a0f" width="400" >
+</p>
 
 ### Example of '5. View Notebook Hierarchy'
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/2c6fa9e5-0422-475c-95d3-37724823d559" width="500" >
+</p>
 
-![Screenshot from 2025-01-26 00-05-02](https://github.com/user-attachments/assets/2c6fa9e5-0422-475c-95d3-37724823d559)
+# Inspiration
+https://discourse.joplinapp.org/t/solved-tips-for-removing-safely-duplicated-notes-from-two-very-similar-notebooks/20943/7
