@@ -87,3 +87,7 @@ A powerful toolkit for managing Joplin notebooks and notes, featuring duplicate 
 
 # Inspiration
 https://discourse.joplinapp.org/t/solved-tips-for-removing-safely-duplicated-notes-from-two-very-similar-notebooks/20943/7
+
+## What is Joplin?
+
+Joplin is an open-source, cross-platform note-taking and to-do application. It is designed to help you organize and manage your notes, tasks, and notebooks efficiently. Joplin supports markdown, rich text, attachments, and synchronization across various devices, making it a versatile tool for personal and professional use. It is available on Windows, macOS, Linux, Android, and iOS, and allows for easy integration with cloud services for seamless synchronization.
