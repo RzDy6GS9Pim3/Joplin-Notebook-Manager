@@ -22,7 +22,10 @@ NOTEBOOK_TO_DELETE = "Notes_to_be_deleted"
 
 def get_api_client() -> ClientApi:
     """Get authenticated API client"""
-    token = os.getenv("JOPLIN_TOKEN") or input("Enter your JOPLIN API token: ")
+    with open("token.txt", "r") as f:
+        token = f.read().strip()
+    if not token:
+        token = os.getenv("JOPLIN_TOKEN") or input("Enter your JOPLIN API token: ")
     return ClientApi(token=token)
 
 def print_header(title: str) -> None:
@@ -88,9 +91,9 @@ def main_menu() -> None:
         except KeyboardInterrupt:
             print("\nOperation cancelled by user.")
             sys.exit(1)
-        except Exception as e:
-            print(f"\nError: {str(e)}")
-            sys.exit(1)
+        # except Exception as e:
+        #     print(f"\nError: {str(e)}")
+        #     sys.exit(1)
 
 if __name__ == "__main__":
     main_menu()

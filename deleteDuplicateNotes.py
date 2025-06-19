@@ -37,6 +37,10 @@ def process_duplicate_notes(api):
     moved_notes = set()
 
     # Note processing logic
+    remember_choice = None
+    # Track the choice outside the loop
+    choice = None
+    # Track if user wants to remember choice
     for idx, note in enumerate(notes_to_process):
         if note.id in moved_notes:
             print(f"\nSkipping note {note.title} (already marked for deletion)")
@@ -97,6 +101,7 @@ def process_duplicate_notes(api):
         print(f"Found {len(duplicates)} potential duplicates")
 
         # Compare with each duplicate
+
         for duplicate in duplicates:
             duplicate_note = api.get_note(
                 id_=duplicate.id,
@@ -160,7 +165,12 @@ def process_duplicate_notes(api):
                 print("2. Keep DUPLICATE, move original to delete")
                 print("3. Skip both")
                 print("4. Mark both for deletion")
-                choice = getkey.getkey()
+                # choice = getkey.getkey()
+                if remember_choice is None:
+                    choice = input("Enter your choice (1-4): ").strip()
+                    remember_choice = input("Remember this choice for future duplicates? (y/n): ").strip().lower()
+                elif remember_choice == 'n':
+                    choice = input("Enter your choice (1-4): ").strip()
 
                 if choice == '1':
                     api.modify_note(duplicate.id, parent_id=notebook_to_delete.id)

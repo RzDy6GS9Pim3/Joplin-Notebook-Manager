@@ -158,13 +158,19 @@ def process_single_duplicate_notes(api):
 
             # User decision
             choice = None  # Track the choice outside the loop
+            remember_choice = None  # Track if user wants to remember choice
             while True:
                 print("\nChoose action:")
                 print("1. Keep ORIGINAL, move duplicate to delete")
                 print("2. Keep DUPLICATE, move original to delete")
                 print("3. Skip both")
                 print("4. Mark both for deletion")
-                choice = getkey.getkey()
+                choice = input("Enter your choice (1-4): ").strip()
+                # choice = getkey.getkey()
+                if remember_choice is None:
+                    remember_choice = input("Remember this choice for future duplicates? (y/n): ").strip().lower()
+                elif remember_choice == 'n':
+                    choice = input("Enter your choice (1-4): ").strip()
 
                 if choice == '1':
                     api.modify_note(duplicate.id, parent_id=notebook_to_delete.id)
